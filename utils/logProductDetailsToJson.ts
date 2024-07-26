@@ -19,7 +19,7 @@ export async function logProductDetailsToJson (platform: string, productDetails:
     let jsonData: ProductDetails = {};
     try {
         // Read existing data from JSON file if it exists
-        const existingData = fs.readFileSync('test-results/productDetails.json', 'utf-8');
+        const existingData = fs.readFileSync('productDetails.json', 'utf-8');
         jsonData = JSON.parse(existingData);
     } catch (error) {
         // File does not exist or contains invalid JSON, initialize jsonData as an empty object
@@ -30,5 +30,5 @@ export async function logProductDetailsToJson (platform: string, productDetails:
     jsonData[platform] = productDetails;
 
     // Write the updated JSON data to a file
-    fs.writeFileSync('test-results/productDetails.json', JSON.stringify(jsonData, null, 2), 'utf-8');
+    fs.writeFileSync('productDetails.json', JSON.stringify(jsonData, null, 2), 'utf-8');
 }
