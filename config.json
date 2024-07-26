@@ -1,0 +1,13 @@
+{
+    "amazon" : {
+        "url" : "https://www.amazon.in/",
+        "title" : "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in",
+        "productToSearch" : "Titan Watch NN1639SM02"
+    },
+
+    "flipkart" : {
+        "url" : "https://www.flipkart.com/",
+        "title" : "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!",
+        "productToSearch" : "Titan Watch NN1639SM02"
+    }
+}
