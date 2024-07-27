@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { productDetailJsonPath, outputDirPath } from './constant';
 
 // Define an interface for the JSON structure
 interface ProductDetails {
@@ -19,7 +20,7 @@ export async function logProductDetailsToJson (platform: "amazon", productDetail
     let jsonData: ProductDetails = {};
     try {
         // Read existing data from JSON file if it exists
-        const existingData = fs.readFileSync('productDetails.json', 'utf-8');
+        const existingData = fs.readFileSync(productDetailJsonPath, 'utf-8');
         jsonData = JSON.parse(existingData);
     } catch (error) {
         // File does not exist or contains invalid JSON, initialize jsonData as an empty object
@@ -29,6 +30,11 @@ export async function logProductDetailsToJson (platform: "amazon", productDetail
     // Add or update product details
     jsonData[platform] = productDetails;
 
+    // Ensure the output directory exists
+    if (!fs.existsSync(outputDirPath)) {
+        fs.mkdirSync(outputDirPath, { recursive: true });
+    }
+
     // Write the updated JSON data to a file
-    fs.writeFileSync('productDetails.json', JSON.stringify(jsonData, null, 2), 'utf-8');
+    fs.writeFileSync(productDetailJsonPath, JSON.stringify(jsonData, null, 2), 'utf-8');
 }

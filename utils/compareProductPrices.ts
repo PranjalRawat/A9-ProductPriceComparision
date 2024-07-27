@@ -1,4 +1,4 @@
-import productDetails from '../productDetails.json';
+import productDetails from '../output/productDetails.json';
 import { generateHTMLReport } from './generateHtmlReport';
 import { openReportInBrowser } from './openReportInBrowser';
 

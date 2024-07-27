@@ -1,7 +1,8 @@
 import * as fs from 'fs';
 import path from 'path';
+import { priceCompareReportPath } from './constant';
 
-const reportPath = path.resolve('test-results/compare-report.html');
+const reportPath = path.resolve(priceCompareReportPath);
 
 export function generateHTMLReport(content: string[]) {
     const listItems = content.map(item => `<li>${item}</li>`).join('\n');
