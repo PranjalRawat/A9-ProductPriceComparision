@@ -14,7 +14,7 @@ test.describe('Amazon Product', () => {
     await amazonPage.navigateToUrl(data['url']);
   });
 
-  test.skip('Verify Amazon Title', async ({ }) => {
+  test('Verify Amazon Title', async ({ }) => {
     await amazonPage.verifyAmazonTitle(data['title']);
     await amazonPage.verifyAmazonHeaderLogoIsVisible();
   });

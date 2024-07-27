@@ -14,7 +14,7 @@ test.describe('Flipkart Product', () => {
     await flipkartPage.navigateToUrl(data['url']);
   });
 
-  test.skip('Verify Flipkart Title', async ({ }) => {
+  test('Verify Flipkart Title', async ({ }) => {
     await flipkartPage.verifyFlipkartTitle(data['title']);
     await flipkartPage.verifyFlipkartHeaderLogoIsVisible();
   });
