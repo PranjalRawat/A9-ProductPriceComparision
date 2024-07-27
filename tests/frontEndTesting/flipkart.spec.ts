@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import config from '../config.json'
-import { FlipkartPage } from '../pageObjects/flipkart';
+import config from '../../config.json'
+import { FlipkartPage } from '../../pageObjects/flipkart';
 
 let flipkartPage: FlipkartPage
 let data: {}

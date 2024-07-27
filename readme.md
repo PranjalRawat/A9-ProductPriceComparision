@@ -61,16 +61,18 @@ The automation framework fetches data from configuration file named `config.json
 
 ### Running the test-suites
 
+#### FrontEnd / UI
+
 There are two ways to run the testcase.
 
 1. Individually:
 
    ```bash
-   npm run test:amazon
+   npm run test:ui:amazon
    ```
 
    ```bash
-   npm run test:flipkart
+   npm run test:ui:flipkart
    ```
 
    These commands will execute the test suites individually and show the html report at the end of the test case execution.
@@ -78,10 +80,34 @@ There are two ways to run the testcase.
 2. Full test-suites:
 
    ```
-   npm run test
+   npm run test:ui
    ```
 
    This commands will execute the all test suites and show the html report at the end of the test case execution.
+
+#### BackEnd / API
+
+There are two ways to run the testcase.
+
+1. Individually:
+
+   ```bash
+   npm run test:api:amazon
+   ```
+
+   ```bash
+   npm run test:api:flipkart
+   ```
+
+   These commands will execute the test suites individually.
+
+2. Full test-suites:
+
+   ```
+   npm run test:api
+   ```
+
+   This commands will execute the all test suites.
 
 ### Running the Compare Price Script
 

@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import config from '../config.json'
-import { AmazonPage } from '../pageObjects/amazon';
+import config from '../../config.json'
+import { AmazonPage } from '../../pageObjects/amazon';
 
 let amazonPage: AmazonPage
 let data: {}

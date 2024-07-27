@@ -16,7 +16,7 @@ interface ProductDetails {
     };
 }
 
-export async function logProductDetailsToJson (platform: "amazon", productDetails: any) {
+export async function logProductDetailsToJson (platform: "amazon" | "flipkart", productDetails: any) {
     let jsonData: ProductDetails = {};
     try {
         // Read existing data from JSON file if it exists

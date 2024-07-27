@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "test:amazon": "npx playwright test tests/amazon.spec.ts",
-    "test:flipkart": "npx playwright test tests/flipkart.spec.ts",
+    "test:ui": "npx playwright test tests/frontEndTesting/*",
+    "test:api": "npx playwright test tests/backEndTesting/*",
+    "test:ui:amazon": "npx playwright test tests/frontEndTesting/amazon.spec.ts",
+    "test:ui:flipkart": "npx playwright test tests/frontEndTesting/flipkart.spec.ts",
+    "test:api:amazon": "npx playwright test tests/backEndTesting/amazon.spec.ts",
+    "test:api:flipkart": "npx playwright test tests/backEndTesting/flipkart.spec.ts",
     "comparePrice": "npx ts-node utils/compareProductPrices.ts"
   },
   "keywords": [],
