@@ -15,7 +15,7 @@ interface ProductDetails {
     };
 }
 
-export async function logProductDetailsToJson (platform: string, productDetails: {}) {
+export async function logProductDetailsToJson (platform: "amazon", productDetails: any) {
     let jsonData: ProductDetails = {};
     try {
         // Read existing data from JSON file if it exists
@@ -26,7 +26,7 @@ export async function logProductDetailsToJson (platform: string, productDetails:
         console.log('Creating new JSON file or initializing with existing data.');
     }
 
-    // Add or update Amazon details
+    // Add or update product details
     jsonData[platform] = productDetails;
 
     // Write the updated JSON data to a file

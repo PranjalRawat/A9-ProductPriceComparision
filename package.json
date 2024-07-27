@@ -2,13 +2,20 @@
   "name": "authenticate9",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:amazon": "npx playwright test tests/amazon.spec.ts",
+    "test:flipkart": "npx playwright test tests/flipkart.spec.ts",
+    "comparePrice": "npx ts-node utils/compareProductPrices.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.45.3",
-    "@types/node": "^20.14.12"
+    "@types/node": "^20.14.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }
